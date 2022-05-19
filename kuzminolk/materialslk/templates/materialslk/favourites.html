@@ -1,0 +1,31 @@
+{% extends 'base_without_footer.html' %}
+{% load static %}
+
+{% block style_link %}
+    <link rel="stylesheet" href="{% static 'css/favourites.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="section-favourites">
+        {% if for_study %}
+            <h1 class="section-favourites-heading">Материалы для обучения</h1>
+            <ul class="section-favourites-list">
+                {% for material in for_study %}
+                    <li class="section-favourites-item">
+                        <a href="{{ material.material.get_absolute_url }}" class="section-favourites-link">{{ material }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% if methodical %}
+            <h1 class="section-favourites-heading">Методические материалы</h1>
+            <ul class="section-favourites-list">
+                {% for material in methodical %}
+                    <li class="section-favourites-item">
+                        <a href="{{ material.material.get_absolute_url }}" class="section-favourites-link">{{ material }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+{% endblock %}

@@ -1,0 +1,159 @@
+form {
+    width: 100%;
+}
+
+/* MATERIAL */
+
+.section-material-detail {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.section-material-detail-heading {
+    color: #2fc94b;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-material-detail-text {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+/* FILES */
+
+.section-material-file {
+    padding-bottom: 35px;
+    border-bottom: #2fc94b solid 3px;
+}
+
+.section-material-file-list {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.section-material-file-item {
+    display: flex;
+    align-items: center;
+}
+
+.section-material-file-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.secton-material-file-img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.section-material-file-link {
+    text-decoration: none;
+    color: #2f1ce4;
+}
+
+.section-material-favourite {
+    color: #2f1ce4;
+    text-decoration: none;
+}
+
+/* STUDENT FILES */
+
+.section-student-file {
+    margin-bottom: 35px;
+}
+
+.section-student-file-heading {
+    color: #2fc94b;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.section-student-file-form {
+    padding: 20px;
+    border: #2fc94b 3px solid;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+.section-student-file-list {
+    list-style: none;
+}
+
+.section-student-file-item {
+    display: flex;
+    align-items: center;
+}
+
+.section-student-file-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.section-student-file-input-heading {
+    margin-right: 20px;
+}
+
+.section-student-file-button {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 10px;
+    width: 140px;
+    height: 50px;
+    cursor: pointer;
+    border: #2fc94b solid 3px;
+    color: #2fc94b;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.section-student-file-button:hover {
+    background-color: #2fc94b;
+    color: #ffffff;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 700px) {
+    .section-student-file-form {
+        text-align: center;
+    }
+
+    .section-student-file-item {
+        flex-direction: column;
+    }
+
+    .section-student-file-input-heading {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section-student-file-input {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .section-material-detail {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .section-material-file {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .section-student-file {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .section-student-file-button {
+        width: 120px;
+    }
+}

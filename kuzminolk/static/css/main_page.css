@@ -1,0 +1,327 @@
+/* HERO */
+
+.section-hero {
+    padding: 0;
+    width: 100%;
+    min-height: 494px;
+    max-height: 90%;
+
+    background: url('../img/school.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section-hero-wrapper {
+    padding-top: 60px;
+    height: 494px;
+    width: 100%;
+    background-color: #2b2b2baa;
+    backdrop-filter: blur(6px);
+}
+
+.section-hero-heading {
+    text-align: center;
+    color: #2fc94b;
+    margin-bottom: 25px;
+}
+
+.section-hero-info {
+    color: #ffffff;
+    max-width: 750px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 20px;
+}
+
+/* ABOUT */
+
+.section-tasks {
+    margin-top: 35px;
+    padding-bottom: 35px;
+    border-bottom: 3px solid #e7e7e7;
+}
+
+.section-tasks-heading {
+    color: #2fc94b;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-tasks-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.section-tasks-item {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+    border: 3px solid #2fc94b;
+    background-color: #f5f5f5;
+}
+
+.section-tasks-image {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+
+.section-tasks-title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.section-tasks-description {
+    text-align: center;
+}
+
+/* SOCIAL */
+
+.section-social {
+    margin-top: 35px;
+    padding-bottom: 35px;
+    border-bottom: 3px solid #e7e7e7;
+}
+
+.section-social-heading {
+    color: #2fc94b;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-social-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-social-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid #2fc94b;
+    background-color: #f5f5f5;
+}
+
+.section-social-item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.section-social-image {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.section-social-description {
+    max-width: 900px;
+}
+
+.section-social-description-title {
+    font-size: 20px;
+}
+
+.section-social-description-link {
+    font-size: 18px;
+    text-decoration: none;
+    color: #2f1ce4;
+    font-weight: bold;
+}
+
+/* CONTACTS */
+
+.section-contacts {
+    margin-top: 35px;
+    margin-bottom: 70px;
+}
+
+.section-contacts-heading {
+    color: #2fc94b;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-contacts-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.section-contacts-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 3px solid #2fc94b;
+    width: 220px;
+    background-color: #f5f5f5;
+}
+
+.section-contacts-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.section-contacts-icon-telephone {
+    background: url('../img/phone.png') no-repeat;
+    background-size: contain;
+}
+
+.section-contacts-icon-mail {
+    background: url('../img/mail.png') no-repeat;
+    background-size: contain;
+}
+
+.section-contacts-icon-address {
+    background: url('../img/address.png') no-repeat;
+    background-size: contain;
+}
+
+.section-contacts-title {
+    text-align: center;
+}
+
+.section-contacts-info {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #2f1ce4;
+    text-decoration: none;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1100px) {
+    .section-tasks-item {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .section-tasks-item {
+        width: 300px;
+    }
+
+    .section-tasks-item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    .section-tasks-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-contacts-item {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 900px) and (max-width: 900px) {
+    .section-hero-info {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+}
+
+@media screen and (max-width: 750px) and (max-width: 800px) {
+    .section-contacts-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-contacts-item {
+        width: 240px;
+        padding: 5px;
+    }
+
+    .section-contacts-item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 700px) and (max-width: 750px) {
+    .section-hero-info {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .section-social-item {
+        flex-direction: column;
+    }
+    
+    .section-social-image {
+        margin: 0;
+    }
+
+    .section-social-description br {
+        display: none;
+    }
+
+    .section-social-description-title {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 550px) and (max-width: 700px) {
+    .section-hero-wrapper {
+        padding-top: 20px;
+    }
+
+    .section-hero-heading {
+        margin-bottom: 15px;
+    }
+
+    .section-social-description {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) and (max-width: 550px) {    
+    .section-hero-heading {
+        font-size: 18px;
+    }
+
+    .section-hero-info .section-hero-info-br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) and (max-width: 450px) {
+   .section-hero-heading {
+       margin-bottom: 25px;
+   }
+
+   .section-hero-info {
+       font-size: 14px;
+       line-height: 14px;
+   }
+
+   .section-social {
+       padding-left: 0px;
+       padding-right: 0px;
+   }
+
+   .section-social-list {
+       width: 250px;
+       margin-right: auto;
+       margin-left: auto;
+   }
+}
+
+@media screen and (max-width: 360px) and (max-width: 400px) {
+    .section-hero-heading {
+        margin-bottom: 10px;
+    }
+    
+    .section-hero-info {
+        text-align: center;
+    }
+}

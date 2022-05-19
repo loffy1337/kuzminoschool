@@ -1,0 +1,34 @@
+{% extends 'base_without_footer.html' %}
+{% load static %}
+
+{% block style_link %}
+    <link rel="stylesheet" href="{% static 'css/materials_parts.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="section-themes">
+        {% if is_teacher %}
+        <form class="form-create-part" action="." method="post">
+                {{ form.as_p }}
+                {% csrf_token%}
+                <button type="submit" class="button-create">Создать новый раздел</button>
+            </form>
+         {% endif %}
+        <ul class="section-themes-list">
+            {% for material in materials %}
+                <li class="section-themes-item">
+                    <h1 class="section-themes-heading">{{ material.name }}</h1>
+                    <ul class="section-themes-part-list">
+                        {% for theme in material.themesmaterialsforstudy_set.all %}
+                            <li class="section-themes-part-item">
+                                <a href="{% url 'for_study_detail' theme.slug %}" class="section-themes-part-link">
+                                    {{ theme.name }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

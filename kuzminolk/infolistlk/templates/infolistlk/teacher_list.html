@@ -1,0 +1,29 @@
+{% extends 'base_with_footer.html' %}
+{% load static %}
+
+{% block style_link %}
+    <link rel="stylesheet" href="{% static 'css/teacher_list.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="section-teacher">
+        <h1 class="section-teacher-heading">Преподавательский состав</h1>
+        <ul class="section-teacher-list">
+            {% for teacher in teachers %}
+                <li class="section-teacher-item">
+                    <img src="{{ MEDIA_URL }}{{ teacher.photo.url }}" alt="" class="section-teacher-photo">
+                    <ul class="section-teacher-info-list">
+                        <li class="section-teacher-info-item">{{ teacher.name }}</li>
+                        <li class="section-teacher-info-item">Образование: {{ teacher.education }}</li>
+                        <li class="section-teacher-info-item">Предметы:</li>
+                        <ol class="section-teacher-lessons-list">
+                            {% for subject in teacher.schoolsubjectforlist_set.all %}
+                                <li class="section-teacher-lessons-item">{{ subject }}</li>
+                            {% endfor %}
+                        </ol>
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

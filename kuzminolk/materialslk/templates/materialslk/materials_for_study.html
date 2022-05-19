@@ -1,0 +1,21 @@
+{% extends 'base_with_footer.html' %}
+{% load static %}
+
+{% block style_link %}
+    <link rel="stylesheet" href="{% static 'css/materials.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="section-materials">
+        <h1 class="section-materials-heading">Материалы для обучения</h1>
+        <ul class="section-materials-list">
+            {% for subject in school_subjects %}
+                <li class="section-materials-item">
+                    <a href="{% url 'for_study_parts' subject.pk %}" class="section-materials-link">
+                        {{ subject.name }} {{ subject.subject_class }} класс ({{ subject.teacher }})
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

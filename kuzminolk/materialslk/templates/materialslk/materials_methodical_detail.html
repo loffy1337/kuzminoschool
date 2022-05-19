@@ -1,0 +1,30 @@
+{% extends 'base_without_footer.html' %}
+{% load static %}
+
+{% block style_link %}
+    <link rel="stylesheet" href="{% static 'css/materials_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="section-material-detail">
+        <h1 class="section-material-detail-heading">{{ theme.name }}</h1>
+        <p class="section-material-detail-text">
+            {{ theme.text|linebreaks }}
+        </p>
+    </section>
+    <section class="section-material-file">
+        <ul class="section-material-file-list">
+            {% for file in theme.filemethodicaltheme_set.all %}
+                <li class="section-material-file-item">
+                    <img src="{% static 'img/file.png' %}" alt="" class="secton-material-file-img">
+                    <a href="/files/file.docx" target="_blank" class="section-material-file-link">{{ file }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        {% if not is_teacher %}
+            <a href="{% url 'favourites_add' 'methodical' theme.slug %}" class="section-material-favourite">
+                Добавить в избранное
+            </a>
+        {% endif %}
+    </section>
+{% endblock %}

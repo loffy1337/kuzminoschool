@@ -1,0 +1,44 @@
+{% extends 'base_without_footer.html' %}
+{% load static %}
+
+{% block style_link %}
+    <link rel="stylesheet" href="{% static 'css/materials_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="section-material-detail">
+        <h1 class="section-material-detail-heading">{{ theme.name }}</h1>
+        <p class="section-material-detail-text">
+            {{ theme.text|linebreaks }}
+        </p>
+    </section>
+    <section class="section-material-file">
+        <ul class="section-material-file-list">
+            {% for file in theme.filetheme_set.all %}
+                <li class="section-material-file-item">
+                    <img src="{% static 'img/file.png' %}" alt="" class="secton-material-file-img">
+                    <a href="/files/file.docx" target="_blank" class="section-material-file-link">{{ file }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        {% if not is_teacher %}
+            <a href="{% url 'favourites_add' 'for_study' theme.slug %}" class="section-material-favourite">
+                Добавить в избранное
+            </a>
+        {% endif %}
+    </section>
+    {% if form %}
+        <section class="section-student-file">
+            <h1 class="section-student-file-heading">Ответ</h1>
+            <div class="section-student-file-form">
+                <ul class="section-student-file-list">
+                    <li class="section-student-file-item">
+                        {{ form.as_p }}
+                        {% csrf_token%}
+                        <button type="submit" class="section-student-file-button">Отправить ответ</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}

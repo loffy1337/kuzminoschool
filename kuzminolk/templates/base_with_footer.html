@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ЭИОС "Кузьмино"{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    {% block style_link %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <div class="menu" id="menu">
+        <ul class="menu-list">
+            <div href="" class="menu-cross" id="menu-cross">
+                <img src="{% static '/img/cross.png' %}" alt="" class="menu-cross-image">
+            </div>
+            <li class="menu-item">
+                <a href="{% url 'for_study' %}" class="menu-link">Материалы для обучения</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% url 'methodical' %}" class="menu-link">Методические материалы</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% url 'teachers_list' %}" class="menu-link">Преподавательский состав</a>
+            </li>
+            <li class="menu-item">
+                <a href="" class="menu-link">Школьные Мероприятия</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% url 'favourites' %}" class="menu-link">Избранные материалы</a>
+            </li>
+        </ul>
+    </div>
+    <header class="header">
+        <a href="{% url 'main_page' %}" class="header-logo-link">
+            <img src="{% static '/img/logo.png' %}" alt="Логотип" class="header-logo">
+        </a>
+        {% block btn_contacts %}
+            <div class="header-menu" id="header-menu" style="margin-left: auto;">
+                <span class="header-menu-line"></span>
+                <span class="header-menu-line"></span>
+                <span class="header-menu-line"></span>
+            </div>
+        {% endblock %}
+    </header>
+    <main class="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        <ul class="footer-list">
+            <li class="footer-item">
+                <img src="{% static '/img/logo.png' %}" alt="" class="footer-item-logo">
+            </li>
+            <li class="footer-item">
+                <small class="footer-item-copyright">
+                    © 2022. Все права защищены.
+                    Использование материалов сайта возможно только при наличии ссылки на первоисточник.
+                </small>
+            </li>
+            <li class="footer-item">
+                <small class="footer-item-author">
+                    Автор сайта: Варежкин Павел Сергеевич
+                </small>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

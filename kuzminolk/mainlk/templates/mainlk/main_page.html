@@ -1,0 +1,113 @@
+{% extends 'base_with_footer.html' %}
+
+{% load static %}
+
+{% block style_link %}<link rel="stylesheet" href="{% static 'css/main_page.css' %}">{% endblock %}
+
+{% block btn_contacts %}
+    <div class="header-button-contacts" id="btn-contacts">
+        <strong>Связаться с нами</strong>
+    </div>
+    <div class="header-menu" id="header-menu">
+        <span class="header-menu-line"></span>
+        <span class="header-menu-line"></span>
+        <span class="header-menu-line"></span>
+    </div>
+{% endblock %}
+
+{% block content %}
+<section class="section-hero">
+    <div class="section-hero-wrapper">
+        <h1 class="section-hero-heading">МБОУ «Шеметовская СОШ» подразделение Кузьмино</h1>
+        <p class="section-hero-info">
+            История муниципального бюджетного общеобразовательного учреждения «Шеметовская средняя общеобразовательная школа» подразделения Кузьмино начинается сразу после Великой Отечественной войны, когда школа была переведена из д.Михалево в местечко Караваевка, была раньше такая административная единица, в двухэтажное здание 1902 года постройки. Поэтому школа до 1981г. носила название Караваевская восьмилетняя школа.
+            <br class="section-hero-info-br">
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus dolore excepturi fuga deserunt repudiandae inventore rem, eius ipsam similique soluta minima officiis asperiores illum sunt? Debitis enim dicta iste voluptate?
+            Veritatis natus neque voluptatem, facere, cumque unde tempora molestiae accusamus numquam ex sunt quod quis, voluptas repellat porro voluptates nam vero ducimus explicabo totam. Molestias ex labore aliquid quisquam quam?
+            Facilis, odit autem! Iusto vel necessitatibus eius ut corrupti? Velit soluta eligendi veritatis sapiente tempora, explicabo numquam aliquid omnis id voluptate ut quae magni. Impedit odio excepturi nesciunt architecto quod!
+        </p>
+    </div>
+</section>
+<div class="container">
+    <section class="section-tasks">
+        <h1 class="section-tasks-heading">Задачи организации</h1>
+        <ul class="section-tasks-list">
+            <li class="section-tasks-item">
+                <img src="{% static '/img/health.png' %}" alt="" class="section-tasks-image">
+                <h2 class="section-tasks-title">Здоровье</h2>
+                <p class="section-tasks-description">
+                    В школе проводятся мероприятия, посвещенные профилактике вредных привычек среди школьников — курение, употребление алкоголя и наркотиков.
+                </p>
+            </li>
+            <li class="section-tasks-item">
+                <img src="{% static '/img/education.png' %}" alt="" class="section-tasks-image">
+                <h2 class="section-tasks-title">Образование</h2>
+                <p class="section-tasks-description">
+                    Основной целью школы являются формирование знаний обучающихся на основе усвоения обязательного минимума содержания образовательных программ.
+                </p>
+            </li>
+            <li class="section-tasks-item" >
+                <img src="{% static '/img/events.png' %}" alt="" class="section-tasks-image">
+                <h2 class="section-tasks-title">Культурные мероприятия</h2>
+                <p class="section-tasks-description">
+                    Внеклассные мероприятия — воспитывают и всестороннее развивают культурную лучность ученика. Они формируют у детей определённую систему ценностей.
+                </p>
+            </li>
+        </ul>
+    </section>
+    <section class="section-social">
+        <h1 class="section-social-heading">Социальные сети</h1>
+        <ul class="section-social-list">
+            <li class="section-social-item">
+                <img src="{% static '/img/vk.png' %}" alt="" class="section-social-image">
+                <p class="section-social-description">
+                    <strong href="" class="section-social-description-title">Вконтакте</strong>
+                    <br>
+                    Социльная сеть используется школой, для освещения жизни ужреждения и его мероприятий в виду постов.
+                    В постах описаны проведенные культурные мероприятия и новости школы.
+                    Доступ к группе осуществляется по <a href="" class="section-social-description-link">ссылке</a>.
+                </p>
+            </li>
+            <li class="section-social-item">
+                <img src="{% static '/img/youtube.png' %}" alt="" class="section-social-image">
+                <p class="section-social-description">
+                    <strong href="" class="section-social-description-title">Ютуб</strong>
+                    <br>
+                    Видео-хостинг используется школой по назначению. Концерты и мероприятия выкладываются на сайт в виде роликов.
+                    Доступ к Youtube-каналу осуществляется по <a href="" class="section-social-description-link">ссылке</a>.
+                </p>
+            </li>
+            <li class="section-social-item">
+                <img src="{% static '/img/website.png' %}" alt="" class="section-social-image">
+                <p class="section-social-description">
+                    <strong href="" class="section-social-description-title">Веб-сайт</strong>
+                    <br>
+                    Ресур является информационным сайтом, на котором расположены: документы, уставы, образовательная программа и т.д.
+                    Доступ к сайту осуществляется по <a href="" class="section-social-description-link">ссылке</a>.
+                </p>
+            </li>
+        </ul>
+    </section>
+    <section class="section-contacts" id="section-contacts">
+        <h1 class="section-contacts-heading">Контакты</h1>
+        <ul class="section-contacts-list">
+            <li class="section-contacts-item">
+                <span class="section-contacts-icon section-contacts-icon-telephone"></span>
+                <strong class="section-contacts-title">Номер телефона</strong>
+                <a href="tel:84965418399" class="section-contacts-info">8 (496) 541-83-995</a>
+            </li>
+            <li class="section-contacts-item">
+                <span class="section-contacts-icon section-contacts-icon-mail"></span>
+                <strong class="section-contacts-title">Электронная почта</strong>
+                <a href="mailto:kuzmino45@yandex.ru" class="section-contacts-info">kuzmino45@yandex.ru</a>
+            </li>
+            <li class="section-contacts-item">
+                <span class="section-contacts-icon section-contacts-icon-address"></span>
+                <strong class="section-contacts-title">Адрес</strong>
+                <a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/house/derevnya_kuzmino_45/Z04YfwVpT0MCQFtsfXl4dHllYA==/?ll=37.929665%2C56.595564&z=16" target="_blank" class="section-contacts-info">Московская область, Сергиево-Посадский г.о., д. Кузьмино, д. 45</a>
+            </li>
+        </ul>
+    </section>
+</div>
+{% endblock %}

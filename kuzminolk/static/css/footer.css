@@ -1,0 +1,57 @@
+/* FOOTER */
+
+.footer {
+    position: absolute;
+    width: 100%;
+
+    padding-right: 80px;
+    padding-left: 80px;
+    height: 80px;
+    
+    background-color: #2b2b2b;
+    border-top: 3px solid #0c0c0c;
+}
+
+.footer-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+.footer-item:last-child {
+    margin-left: auto;
+}
+
+.footer-item-logo {
+    margin-right: 10px;
+    width: 60px;
+}
+
+.footer-item-copyright {
+    display: inline-block;
+    color: #ffffff;
+    width: 300px;
+}
+
+.footer-item-author {
+    color: #ffffff;
+}
+
+/* MEADIA */
+
+@media screen and (max-width: 750px) and (max-width: 800px) {
+    .footer-item:last-child {
+        display: none;
+    }
+
+    .footer-list {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 400px) and (max-width: 450px) { 
+    .footer-item:first-child {
+        display: none;
+    }
+ }

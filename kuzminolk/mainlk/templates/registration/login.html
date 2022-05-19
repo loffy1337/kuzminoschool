@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация ЭИОС «Кузьмино»</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <section class="section-login">
+        <form action="{% url 'login' %}" method="post" class="section-login-form">
+            {% csrf_token %}
+            <h1 class="section-login-heading">Вход</h1>
+            {{ form.as_p }}
+            <button type="submit" class="section-login-button"><strong>Войти</strong></button>
+        </form>
+    </section>
+</body>
+</html>
